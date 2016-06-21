@@ -1,0 +1,51 @@
+{
+  "name": "redux-todo",
+  "version": "1.0.0",
+  "description": "Todo App built with React/Redux",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "react": "^15.1.0",
+    "react-bootstrap": "^0.29.4",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-2": "^6.5.0",
+    "chai": "^3.5.0",
+    "css-loader": "^0.23.1",
+    "envify": "^3.4.0",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
+    "html-webpack-plugin": "miyucy/html-webpack-plugin#simplified",
+    "mocha-webpack": "^0.3.1",
+    "strict-loader": "^1.1.0",
+    "transform-loader": "^0.2.3",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "NODE_ENV=test mocha-webpack",
+    "test:watch": "NODE_ENV=test npm test -- --watch",
+    "lint": "eslint app"
+  },
+  "author": "Yuya Takeyama",
+  "license": "MIT"
+}

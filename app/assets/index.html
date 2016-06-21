@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redux ToDo</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <section id="mount"></section>
+    <section id="debug-info"></section>
+    <% _.forEach(chunks, function(chunk) { %>
+      <script src="<%- chunk.files[0] %>"></script>
+    <% }); %>
+  </body>
+</html>

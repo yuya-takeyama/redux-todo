@@ -3,28 +3,19 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from 'components/App'
+import TodoApp from 'components/TodoApp'
 
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return {count: state.count + 1};
-    case 'DECREMENT':
-      return {count: state.count - 1};
-    default:
-      return {count: 0};
-  }
-};
+import reducers from 'reducers/index';
 
-let store = createStore(reducer);
+let store = createStore(reducers);
 
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <TodoApp {...store.getState()} />
     </Provider>,
     document.getElementById('root')
   );

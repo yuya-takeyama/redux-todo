@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import App from 'components/App'
 
 import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,22 +20,6 @@ const reducer = (state, action) => {
 };
 
 let store = createStore(reducer);
-
-class Provider extends React.Component {
-  getChildContext() {
-    return {
-      store: this.props.store
-    };
-  }
-
-  render() {
-    return this.props.children;
-  }
-}
-
-Provider.childContextTypes = {
-  store: React.PropTypes.object
-};
 
 const render = () => {
   ReactDOM.render(

@@ -42,10 +42,12 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
+    "start": "node index.js",
     "build": "webpack",
     "test": "NODE_ENV=test mocha-webpack",
     "test:watch": "NODE_ENV=test npm test -- --watch",
-    "lint": "eslint app"
+    "lint": "eslint app",
+    "postinstall": "npm run build"
   },
   "author": "Yuya Takeyama",
   "license": "MIT"

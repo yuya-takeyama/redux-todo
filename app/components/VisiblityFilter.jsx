@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FilterLink from 'components/FilterLink';
+import FilterLink from './FilterLink';
 
 export default class VisiblityFilter extends React.Component {
   render() {

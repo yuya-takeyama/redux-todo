@@ -1,14 +1,16 @@
-import todo from 'reducers/todo';
+import todo from './todo';
 
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
         ...state,
-        todo(state, action)
+        todo(state, action),
       ];
+
     case 'TOGGLE_TODO':
-      return state.map((state) => todo(state, action));
+      return state.map((t) => todo(t, action));
+
     default:
       return state;
   }

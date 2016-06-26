@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TodoList from 'components/TodoList';
-import VisiblityFilter from 'components/VisiblityFilter';
+import TodoList from './TodoList';
+import VisiblityFilter from './VisiblityFilter';
 
 export default class TodoApp extends React.Component {
   getVisibleTodos() {

@@ -3,12 +3,12 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import TodoApp from 'components/TodoApp'
+import TodoApp from './components/TodoApp';
 
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducers from 'reducers/index';
+import reducers from './reducers/index';
 
 let store = createStore(reducers);
 

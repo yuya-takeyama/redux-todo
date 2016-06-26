@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Todo from 'components/Todo';
+import Todo from './Todo';
 
 export default class TodoList extends React.Component {
   onAddTodo() {

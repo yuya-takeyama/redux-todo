@@ -2,15 +2,12 @@ import 'babel-polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import TodoApp from './components/TodoApp';
-
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducers from './reducers/index';
+import TodoApp from './components/TodoApp';
+import { configureStore } from './store/configureStore';
 
-let store = createStore(reducers);
+let store = configureStore();
 
 const render = () => {
   ReactDOM.render(

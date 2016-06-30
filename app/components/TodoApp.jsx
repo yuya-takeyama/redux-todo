@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TodoList from './TodoList';
+import VisibleTodoList from '../containers/VisibleTodoList';
 import VisiblityFilter from './VisiblityFilter';
 
 export default class TodoApp extends React.Component {
@@ -20,7 +20,7 @@ export default class TodoApp extends React.Component {
   render() {
     return (
       <div>
-        <TodoList todos={this.getVisibleTodos()} />
+        <VisibleTodoList todos={this.getVisibleTodos()} />
         <VisiblityFilter visiblityFilter={this.props.visiblityFilter}/>
       </div>
     );

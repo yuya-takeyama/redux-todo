@@ -1,27 +1,43 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Todo from './Todo';
 
-export default class TodoList extends React.Component {
-  onAddTodo() {
-    const { store } = this.context;
+const TodoList = ({ todos, addTodo, onTodoClick }) => {
+  let input;
 
-    store.dispatch({type: 'ADD_TODO', title: this.input.value});
-  }
+  let onSubmitForm = (event) => {
+    event.preventDefault();
+    addTodo(input.value);
+  };
 
-  render() {
-    return (
-      <div>
-        <input type="text" ref={(node) => this.input = node} />
-        <input type="button" value="Add" onClick={this.onAddTodo.bind(this)} />
-        <ul>
-          {this.props.todos.map(todo => <Todo key={todo.id} {...todo} />)}
-        </ul>
-      </div>
-    );
-  }
-}
-
-TodoList.contextTypes = {
-  store: React.PropTypes.object
+  return (
+    <div>
+      <form onSubmit={onSubmitForm}>
+        <input type="text" ref={(node) => input = node} />
+        <input type="button" value="Add" />
+      </form>
+      <ul>
+        {todos.map(todo =>
+          <Todo
+            key={todo.id}
+            {...todo}
+            onClick={() => onTodoClick(todo.id)}
+          />)}
+      </ul>
+    </div>
+  );
 };
+
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      completed: PropTypes.bool.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ),
+  addTodo: PropTypes.func.isRequired,
+  onTodoClick: PropTypes.func.isRequired,
+};
+
+export default TodoList;

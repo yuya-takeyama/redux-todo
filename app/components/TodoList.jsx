@@ -14,7 +14,7 @@ const TodoList = ({ todos, addTodo, onTodoClick }) => {
     <div>
       <form onSubmit={onSubmitForm}>
         <input type="text" ref={(node) => input = node} />
-        <input type="button" value="Add" />
+        <input type="submit" value="Add" />
       </form>
       <ul>
         {todos.map(todo =>

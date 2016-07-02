@@ -9,14 +9,13 @@ import { configureStore } from './store/configureStore';
 
 let store = configureStore();
 
-const render = () => {
+const render = () =>
   ReactDOM.render(
     <Provider store={store}>
       <TodoApp />
     </Provider>,
     document.getElementById('root')
   );
-};
 
 store.subscribe(render);
 render();

@@ -3,7 +3,7 @@ import React from 'react';
 import VisibleTodoList from '../containers/VisibleTodoList';
 import VisiblityFilter from './VisiblityFilter';
 
-const TodoApp = (props) =>
+const TodoApp = () =>
   <div>
     <VisibleTodoList />
     <VisiblityFilter />

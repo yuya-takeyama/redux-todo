@@ -12,7 +12,7 @@ let store = configureStore();
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
-      <TodoApp {...store.getState()} />
+      <TodoApp />
     </Provider>,
     document.getElementById('root')
   );

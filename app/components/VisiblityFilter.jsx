@@ -2,18 +2,13 @@ import React from 'react';
 
 import FilterLink from '../containers/FilterLink';
 
-export default class VisiblityFilter extends React.Component {
-  render() {
-    const currentFilter = this.props.visiblityFilter;
+const VisiblityFilter = () =>
+  <div>
+    <FilterLink filter={"All"} />
+    {" / "}
+    <FilterLink filter={"Incomplete"} />
+    {" / "}
+    <FilterLink filter={"Completed"} />
+  </div>;
 
-    return (
-      <div>
-        <FilterLink currentFilter={currentFilter} filter={"All"} />
-        {" / "}
-        <FilterLink currentFilter={currentFilter} filter={"Incomplete"} />
-        {" / "}
-        <FilterLink currentFilter={currentFilter} filter={"Completed"} />
-      </div>
-    );
-  }
-}
+export default VisiblityFilter;

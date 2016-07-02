@@ -1,12 +1,11 @@
 import React from 'react';
 
-let Todo = ({ title, completed, onClick }) => (
+let Todo = ({ title, completed, onClick }) =>
   <li
     style={{textDecoration: completed ? 'line-through' : 'none'}}
     onClick={onClick}
     >
     {title}
-  </li>
-);
+  </li>;
 
 export default Todo;

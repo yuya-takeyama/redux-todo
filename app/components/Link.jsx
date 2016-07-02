@@ -18,7 +18,7 @@ const Link = ({ filter, currentFilter, onClickFilterLink }) => {
 Link.propTypes = {
   filter: PropTypes.string.isRequired,
   currentFilter: PropTypes.string.isRequired,
-  changeVisiblityFilter: PropTypes.func.isRequired,
+  onClickFilterLink: PropTypes.func.isRequired,
 };
 
 export default Link;

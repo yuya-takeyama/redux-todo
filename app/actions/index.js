@@ -9,3 +9,8 @@ export const toggleTodo = (id) => ({
   type: 'TOGGLE_TODO',
   id,
 });
+
+export const changeVisiblityFilter = (filter) => ({
+  type: 'CHANGE_VISIBLITY_FILTER',
+  filter,
+});
